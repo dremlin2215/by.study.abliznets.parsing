@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.example.com/devices ../resources/devices.xsd"
+         xmlns="http://www.example.com/devices">
+
+    <obligatory_device id="A432gt">
+        <name>WD Caviar Blue 1Tb</name>
+        <shipment>
+            <company>Western Digital</company>
+            <shipmentDate>2018-12-11</shipmentDate>
+            <price>115</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <ports>SATA</ports>
+        <energyConsumption>6.8</energyConsumption>
+        <isObligatory>true</isObligatory>
+        <type>HDD</type>
+        <volume>1Tb</volume>
+    </obligatory_device>
+
+    <nonobligatory_device id="C452">
+        <name>Logitech G413 Carbon</name>
+        <shipment>
+            <company>Logitech</company>
+            <shipmentDate>2019-02-01</shipmentDate>
+            <price>160</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <energyConsumption>0</energyConsumption>
+        <isObligatory>false</isObligatory>
+        <type>keyboard</type>
+        <parameters>Mechanical</parameters>
+        <isPeripheral>true</isPeripheral>
+    </nonobligatory_device>
+
+ <obligatory_device id="T15PL">
+        <name>Gigabyte GA-Z77P-D3</name>
+        <shipment>
+            <company>Intel</company>
+            <shipmentDate>2017-12-11</shipmentDate>
+            <price>82</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <ports>HDMI, etc</ports>
+        <energyConsumption>3</energyConsumption>
+        <isObligatory>true</isObligatory>
+        <type>motherboard</type>
+    </obligatory_device>
+
+
+ <obligatory_device id="R516lp">
+        <name>DDR3</name>
+        <shipment>
+            <company>Samsung</company>
+            <shipmentDate>2018-08-01</shipmentDate>
+            <price>3</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <ports>none</ports>
+        <energyConsumption>3.0</energyConsumption>
+        <isObligatory>true</isObligatory>
+        <type>RAM</type>
+        <volume>4Gb</volume>
+    </obligatory_device>
+
+ <nonobligatory_device id="T547E">
+        <name>Pixma IP7250 Drucker</name>
+        <shipment>
+            <company>Canon</company>
+            <shipmentDate>2018-02-01</shipmentDate>
+            <price>100</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <energyConsumption>10</energyConsumption>
+        <isObligatory>false</isObligatory>
+        <type>scanner</type>
+        <parameters>Mechanical</parameters>
+        <isPeripheral>true</isPeripheral>
+    </nonobligatory_device>
+
+ <nonobligatory_device id="S894DS">
+        <name>C930e Webcam</name>
+        <shipment>
+            <company>Logitech</company>
+            <shipmentDate>2018-07-10</shipmentDate>
+            <price>45</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <energyConsumption>1</energyConsumption>
+        <isObligatory>false</isObligatory>
+        <type>webcamera</type>
+        <parameters>Electric</parameters>
+        <isPeripheral>true</isPeripheral>
+    </nonobligatory_device>
+
+<obligatory_device id="R589lp">
+        <name>HDD</name>
+        <shipment>
+            <company>Hitachi</company>
+            <shipmentDate>2018-07-12</shipmentDate>
+            <price>28</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <ports>SATA</ports>
+        <energyConsumption>9.0</energyConsumption>
+        <isObligatory>true</isObligatory>
+        <type>HDD</type>
+        <volume>500GB</volume>
+    </obligatory_device>
+
+<obligatory_device id="O14LK">
+        <name>GIGABYTE GA-G31M-S2L</name>
+        <shipment>
+            <company>Intel</company>
+            <shipmentDate>2017-07-28</shipmentDate>
+            <price>87</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <ports>USB, etc</ports>
+        <energyConsumption>18.0</energyConsumption>
+        <isObligatory>true</isObligatory>
+        <type>motherboard</type>
+        <socket>g2</socket>
+    </obligatory_device>
+
+<obligatory_device id="G56LK">
+        <name>ATX HighEnd EXTREME</name>
+        <shipment>
+            <company>Intel</company>
+            <shipmentDate>2018-08-24</shipmentDate>
+            <price>89</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <ports>USB</ports>
+        <energyConsumption>150.4</energyConsumption>
+        <isObligatory>true</isObligatory>
+        <type>motherboard</type>
+        <chipset>x79</chipset>
+    </obligatory_device>
+
+ <nonobligatory_device id="S794DS">
+        <name>Rechargeable Wireless 2400DPI</name>
+        <shipment>
+            <company>Logitech</company>
+            <shipmentDate>2019-02-02</shipmentDate>
+            <price>125</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <energyConsumption>0.5</energyConsumption>
+        <isObligatory>false</isObligatory>
+        <type>mouse</type>
+        <parameters>Wireless</parameters>
+        <isPeripheral>true</isPeripheral>
+    </nonobligatory_device>
+
+ <nonobligatory_device id="Q45H">
+        <name>Geforce 1060</name>
+        <shipment>
+            <company>ASUS</company>
+            <shipmentDate>2018-08-02</shipmentDate>
+            <price>157</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <energyConsumption>0.9</energyConsumption>
+        <isObligatory>false</isObligatory>
+        <type>videocard</type>
+        <parameters>Electric</parameters>
+        <isPeripheral>false</isPeripheral>
+    </nonobligatory_device>
+
+<nonobligatory_device id="PJ8UI">
+        <name>PB278Q 27" WQHD</name>
+        <shipment>
+            <company>ASUS</company>
+            <shipmentDate>2019-01-01</shipmentDate>
+            <price>705</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <energyConsumption>2.9</energyConsumption>
+        <isObligatory>false</isObligatory>
+        <type>display</type>
+        <parameters>Electric</parameters>
+        <isPeripheral>true</isPeripheral>
+    </nonobligatory_device>
+
+<obligatory_device id="G565LK">
+        <name>Intel Core i5-3470</name>
+        <shipment>
+            <company>Intel</company>
+            <shipmentDate>2018-09-30</shipmentDate>
+            <price>49</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <ports>USB</ports>
+        <energyConsumption>6.8</energyConsumption>
+        <isObligatory>true</isObligatory>
+        <type>CPU</type>
+        <socket>LGA 1155</socket>
+    </obligatory_device>
+
+<obligatory_device id="G59LK">
+        <name>DDR3 SDRAM</name>
+        <shipment>
+            <company>XUM</company>
+            <shipmentDate>2018-12-31</shipmentDate>
+            <price>5</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <ports>DIMM</ports>
+        <energyConsumption>1.9</energyConsumption>
+        <isObligatory>true</isObligatory>
+        <type>RAM</type>
+        <frequency>1333MHz</frequency>
+    </obligatory_device>
+
+<obligatory_device id="A59LK">
+        <name>ST500LT012</name>
+        <shipment>
+            <company>Seagate</company>
+            <shipmentDate>2017-08-10</shipmentDate>
+            <price>26</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <ports>SATA</ports>
+        <energyConsumption>1.7</energyConsumption>
+        <isObligatory>true</isObligatory>
+        <type>HDD</type>
+        <volume>500GB</volume>
+    </obligatory_device>
+
+<obligatory_device id="P47LK">
+        <name>HDS723030ALA640</name>
+        <shipment>
+            <company>Hitachi</company>
+            <shipmentDate>2018-11-10</shipmentDate>
+            <price>43</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <ports>SAS</ports>
+        <energyConsumption>4.17</energyConsumption>
+        <isObligatory>true</isObligatory>
+        <type>HDD</type>
+        <volume>3TB</volume>
+    </obligatory_device>
+</devices>

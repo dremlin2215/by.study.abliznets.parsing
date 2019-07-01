@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.example.com/devices ../resources/devices.xsd"
+         xmlns="http://www.example.com/devices">
+
+    <obligatory_device id="A432gt">
+        <name>WD Caviar Blue 1Tb</name>
+        <shipment>
+            <company>Western Digital</company>
+            <shipmentDate>2018-12-11</shipmentDate>
+            <price>115</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <ports>SATA</ports>
+        <energyConsumption>6.8</energyConsumption>
+        <isObligatory>true</isObligatory>
+        <type>HDD</type>
+        <volume>1Tb</volume>
+    </obligatory_device>
+
+    <nonobligatory_device id="C452">
+        <name>Logitech G413 Carbon</name>
+        <shipment>
+            <company>Logitech</company>
+            <shipmentDate>2019-02-01</shipmentDate>
+            <price>160</price>
+        </shipment>
+        <hasCooler>false</hasCooler>
+        <energyConsumption>0</energyConsumption>
+        <isObligatory>false</isObligatory>
+        <type>keyboard</type>
+        <parameters>Mechanical</parameters>
+        <isPeripheral>true</isPeripheral>
+    </nonobligatory_device>
+
+
+</devices>

@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+
+<xs:schema elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.com/devices"
+           xmlns="http://www.example.com/devices">
+
+    <xs:element name="devices">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="device" minOccurs="2" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="device" type="deviceType" abstract="true"/>
+    <xs:element name="obligatory_device" type="obligatoryDeviceType" substitutionGroup="device"/>
+    <xs:element name="nonobligatory_device" type="nonobligatoryDeviceType" substitutionGroup="device"/>
+
+    <!--__________________________________________-->
+
+    <xs:complexType name="deviceType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="shipment" type="shipmentType"/>
+            <xs:element name="hasCooler" type="xs:boolean"/>
+            <xs:element name="ports" type="xs:string" minOccurs="0" maxOccurs="8"/>
+            <xs:element name="energyConsumption" type="xs:double" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="deviceId" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="shipmentType">
+        <xs:sequence>
+            <xs:element name="company" type="xs:string"/>
+            <xs:element name="shipmentDate" type="xs:date"/>
+            <xs:element name="price" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="deviceId">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="[a-zA-Z][a-zA-Z0-9]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--__________________________________________-->
+
+    <xs:complexType name="obligatoryDeviceType">
+        <xs:complexContent>
+            <xs:extension base="deviceType">
+                <xs:sequence>
+                    <xs:element name="isObligatory" fixed="true"/>
+
+                    <xs:element name="type" type="obligatoryEnum"/>
+                    <xs:element name="frequency" type="frequencyFilter" minOccurs="0"/>
+                    <xs:element name="RAMType" type="ramFilter" minOccurs="0"/>
+                    <xs:element name="socket" type="xs:string" minOccurs="0"/>
+                    <xs:element name="chipset" type="xs:string" minOccurs="0"/>
+                    <xs:element name="interface" type="xs:string" minOccurs="0"/>
+                    <xs:element name="volume" type="volumeFileter" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="obligatoryEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="power-supply"/>
+            <xs:enumeration value="RAM"/>
+            <xs:enumeration value="motherboard"/>
+            <xs:enumeration value="CPU"/>
+            <xs:enumeration value="HDD"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="frequencyFilter">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]*\s*([MG][Hh][Zz])"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ramFilter">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]*\s*([MG][Bb])"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="volumeFileter">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][.]?[0-9]*\s*([GT][Bb])"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--__________________________________________-->
+
+
+    <xs:complexType name="nonobligatoryDeviceType">
+        <xs:complexContent>
+            <xs:extension base="deviceType">
+                <xs:sequence>
+                    <xs:element name="isObligatory" fixed="false"/>
+
+                    <xs:element name="type" type="nonobligatoryEnum"/>
+                    <xs:element name="parameters" type="xs:string"/>
+                    <xs:element name="isPeripheral" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="nonobligatoryEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="display"/>
+            <xs:enumeration value="case"/>
+            <xs:enumeration value="drive"/>
+            <xs:enumeration value="storage"/>
+            <xs:enumeration value="soundcard"/>
+            <xs:enumeration value="videocard"/>
+            <xs:enumeration value="webcamera"/>
+            <xs:enumeration value="mouse"/>
+            <xs:enumeration value="joystick"/>
+            <xs:enumeration value="keyboard"/>
+            <xs:enumeration value="plotter"/>
+            <xs:enumeration value="scanner"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
