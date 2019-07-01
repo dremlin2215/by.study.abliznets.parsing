@@ -34,21 +34,3 @@ public class XMLValidatorTest {
 
     }
 }
-
-/*
-
-
-    @Test(expectedExceptions = WrongParamsException.class)
-    // Ask if such format while throwing an exception is valid in testing
-    public void convertDot_invalidDot_WrongParamsException() throws WrongParamsException {
-        // ^ The right name ends this way or with true?
-        //given
-        DataConverter dataConverter = DataConverter.getInstance();
-        String str = "3,0,0.4";
-        //when
-        Dot testDot = dataConverter.convertDot(str);
-        //then
-        Assert.assertFalse(false);
-    }
-
-*/
